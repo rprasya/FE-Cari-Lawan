@@ -30,7 +30,7 @@ const Register = () => {
     try {
       // mengirim data form ke server menggunakan Axios
       const response = await axios.post(
-        "https://be-cari-lawan.vercel.app/api/users/",
+        " https://be-carilawan-production.up.railway.app/api/users/",
         formData
       );
       setMessage("Registion success.");
