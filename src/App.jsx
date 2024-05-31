@@ -1,28 +1,28 @@
 import {Routes, Route, Link} from "react-router-dom"
-import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Home from "./pages/Home";
-import ProtectedPage from "./pages/ProtectedPage";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import ProtectPage from "./pages/ProtectPage";
 import Intro from "./pages/Intro";
-import LandingPage from "./pages/LandingPage";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
     <>
 
-      {/* <div>
-        <Link to="/home">Home</Link>
+      <div>
+        <Link to="/intro">Home</Link>
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
-      </div> */}
+      </div>
 
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/protected" element={<ProtectedPage />} />
+        <Route path="/protectPage" element={<ProtectPage />} />
         <Route path="/intro" element={<Intro />} />
-        <Route path="/landingPage" element={<LandingPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const LandingPage = () => {
+const Dashboard = () => {
   return (
     <div className="w-[430px] h-screen flex flex-col justify-center items-center bg-[#F6F5FA]">
       <div className="text-center">
@@ -25,4 +25,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Dashboard;
