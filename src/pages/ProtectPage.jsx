@@ -1,13 +1,20 @@
-import Logout from "../components/Logout";
+import { useEffect } from 'react';
 
-const ProtectPage = () => {
+const ProtectedPage = () => {
+  useEffect(() => {
+    const token = document.cookie.split('; ').find((cookie) => cookie.startsWith('token='));
+
+    if (!token) {
+      window.location.href = '/login';
+    }
+  }, []);
+
   return (
-    <div>
-      <h1>Welcome!</h1>
-      <p>This is a protected page. Only accessible when logged in.</p>
-      <Logout />
+    <div className='mt-9'>
+      <h1>Halaman yang Dilindungi</h1>
+      <p>Anda memiliki akses ke halaman ini karena Anda telah login.</p>
     </div>
   );
 };
 
-export default ProtectPage;
+export default ProtectedPage;
