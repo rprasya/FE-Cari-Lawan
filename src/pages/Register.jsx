@@ -34,6 +34,7 @@ const Register = () => {
         formData
       );
       setMessage("Registion success.");
+      window.location.href = "/login";
     } catch (error) {
       // menangani error respons
       setMessage("Registion failed. Please try again.");
@@ -45,7 +46,7 @@ const Register = () => {
     <div className="bg-blue-400 mt-6 p-5">
       <div className="font-bold mb-4">Register page</div>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="text-white">
           <div className="mt-2">
             <label>Fullname:</label>
             <input
